@@ -1107,14 +1107,12 @@ footer {
     line-height: 1.7;
 }
 
-/* Tampilan Tablet */
 @media (max-width: 900px) {
     #olahraga .extra-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Tampilan HP */
 @media (max-width: 600px) {
     #olahraga .extra-grid {
         grid-template-columns: 1fr;
@@ -1177,7 +1175,6 @@ button:hover {
     transform: translateX(5px);
 }
 
-/* BAGIAN EKSTRAKURIKULER */
 .ekskul-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1259,7 +1256,6 @@ button:hover {
     display: block;
 }
  
-/* Merapikan semua foto guru */
 .teacher-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1271,14 +1267,12 @@ button:hover {
     box-sizing: border-box;
 }
 
-/* Kartu guru */
 .teacher-card {
     width: 100%;
     text-align: center;
     box-sizing: border-box;
 }
 
-/* Foto guru */
 .teacher-photo img {
     width: 100%;
     height: 250px;
@@ -1340,12 +1334,7 @@ button:hover {
     }
 }
 
-/* =================================
-   PERBAIKAN RESPONSIVE WEBSITE
-   MA AL ANBAWI
-================================= */
 
-/* HEADER */
 .nav-container {
     position: relative;
     height: 85px;
@@ -1371,7 +1360,6 @@ button:hover {
     font-size: 13px;
 }
 
-/* TOMBOL MENU */
 .menu-toggle {
     display: none;
     padding: 0;
@@ -1390,7 +1378,6 @@ button:hover {
     transform: none;
 }
 
-/* TAMPILAN HP DAN TABLET */
 @media (max-width: 900px) {
 
     .nav-container {
@@ -1444,7 +1431,6 @@ button:hover {
         margin-top: 8px;
     }
 
-    /* BAGIAN PEMBUKA */
     .hero {
         min-height: 100vh;
         background-position: center center;
@@ -1489,7 +1475,6 @@ button:hover {
     }
 }
 
-/* KHUSUS HP KECIL */
 @media (max-width: 480px) {
 
     .container {
@@ -1566,5 +1551,325 @@ button:hover {
 
     body {
         overflow-x: hidden;
+    }
+}
+
+/* =====================================
+   FINAL DESIGN - MA AL ANBAWI
+===================================== */
+
+/* HEADER */
+.navbar {
+    background: rgba(245, 248, 243, 0.98);
+}
+
+.nav-container {
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.logo span {
+    display: block;
+    color: #0d6b4a;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.logo small {
+    display: block;
+    color: #234a3d;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* MENU */
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    color: #0d6b4a;
+    font-size: 30px;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+}
+
+.menu-toggle:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* BERANDA */
+.hero {
+    min-height: 750px;
+    height: 85vh;
+    max-height: 850px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 90px 20px 40px;
+    text-align: center;
+}
+
+.arabic {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.hero-label {
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 65px);
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.hero p {
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.hero-buttons .btn {
+    min-width: 190px;
+    text-align: center;
+    padding: 15px 25px;
+}
+
+/* =====================================
+   TAMPILAN HP
+===================================== */
+
+@media (max-width: 768px) {
+
+    /* HEADER HP */
+    .nav-container {
+        height: 78px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .logo span {
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
+    .logo small {
+        font-size: 11px;
+    }
+
+    .menu-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    /* SEMBUNYIKAN MENU SEBELUM DIBUKA */
+    .navbar nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 15px 5%;
+        margin: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.12);
+    }
+
+    .navbar nav.active {
+        display: flex;
+    }
+
+    .navbar nav ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+        margin: 0;
+    }
+
+    .navbar nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        color: #234a3d;
+        font-size: 15px;
+    }
+
+    .navbar nav button {
+        width: 100%;
+        background: #0d6b4a;
+        color: white;
+        border: none;
+        box-shadow: none;
+        text-align: left;
+    }
+
+    /* FOTO BERANDA LEBIH PENDEK */
+    .hero {
+        height: 680px;
+        min-height: 620px;
+        max-height: 720px;
+        background-position: center center;
+    }
+
+    .hero-content {
+        padding: 65px 15px 35px;
+    }
+
+    .arabic {
+        font-size: 27px;
+        margin-bottom: 15px;
+    }
+
+    .hero-label {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        line-height: 1.15;
+        margin: 18px 0;
+    }
+
+    .hero p {
+        font-size: 15px;
+        line-height: 1.7;
+        padding: 0 5px;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    .hero-buttons .btn {
+        min-width: 0;
+        flex: 1;
+        padding: 13px 8px;
+        font-size: 13px;
+    }
+
+    /* BAGIAN LAIN */
+    .section {
+        padding: 55px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .profile-grid,
+    .news-grid,
+    .gallery,
+    .teacher-grid,
+    .extra-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-grid,
+    .ppdb-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .ppdb-form {
+        padding: 22px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+/* HP SANGAT KECIL */
+@media (max-width: 380px) {
+
+    .logo span {
+        font-size: 16px;
+    }
+
+    .logo small {
+        font-size: 10px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        max-width: 260px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
     }
 }
